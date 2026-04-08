@@ -1,0 +1,40 @@
+title: LeGamerDc's Tech Blog
+description: 技术分享与探索 · Tech Sharing & Exploration
+baseurl: ""
+url: "https://legamerdc.github.io"
+
+author:
+  name: LeGamerDc
+
+# Collections
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: blog
+    values:
+      layout: post
+
+# Include _resource so its files are copied to the built site and publicly accessible
+include:
+  - _resource
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
